@@ -1,0 +1,82 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+    <title>p5js Template</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.3/p5.js"></script>
+    
+    <script>
+        function setup() {
+            createCanvas(800,600);
+        }
+
+        function draw() {
+            background(220)
+            strokeWeight(5)
+            fill(255)
+
+            //bottom feet
+            stroke(0,80,70)
+            rect(260,320,20,20) //left
+            rect(300,320,20,20) //right
+            
+            //left wing
+            strokeWeight(10)
+            line(240,270,170,240) //bottom right
+            line(170,240,70,280) //bottom left
+            line(240,270,190,180) //top right
+            line(70,280,190,180) //top left
+            
+            //right wing
+            line(340,273,420,240) //bottom left
+            line(420,240,500,278) //bottom right
+            line(340,273,410,180) //top left
+            line(410,180,500,278) //top right
+
+            //body
+            stroke(0)
+            strokeWeight(2)
+            ellipse(290,279,100,100)
+            
+            //top feet
+            strokeWeight(5)
+            stroke(0,90,80)
+            rect(240,290,20,20) //left
+            rect(320,290,20,20) //right
+            
+            //eyes
+            strokeWeight(1)
+            stroke(0)
+            textSize(40)
+            fill(0)
+            text("O", 250,280) //outer left
+            text('O',298,280) //outer right
+            ellipse(265.5,270,20,20) //inner left
+            ellipse(313.5,270,20,20) //inner right
+            
+            //face
+            strokeWeight(5)
+            point(290,279)
+            strokeWeight(2)
+            line(280,290,300,290)
+            
+            
+        }
+    </script>
+</head>
+
+<body>
+    <div id="code" class="container-fluid">
+        <script src="https://gist-it.appspot.com/github/jaszmynh4085/p5js/blob/master/zoog.html?footer=0"></script>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script>
+        $(window).bind("load", function() {
+            $('#code').before($('#defaultCanvas0').remove());
+        });
+    </script>
+</body>
+
+
+</html>
